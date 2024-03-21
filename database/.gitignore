@@ -1,0 +1,10 @@
+*.sqlite*
+/node_modules
+/public
+/storage/*.key
+/vendor
+/tests
+.env
+.env.backup
+.env.development
+npm-debug.log
