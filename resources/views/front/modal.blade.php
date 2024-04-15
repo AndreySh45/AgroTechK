@@ -1,5 +1,5 @@
 <!-- Begin Modal Area -->
-<div class="modal quick-view-modal fade" id="quickModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
+<div class="modal quick-view-modal fade" id="productShowModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,21 +11,21 @@
                         <div class="modal-img">
                             <div class="swiper-container modal-slider">
                                 <div class="swiper-wrapper">
-                                    @foreach ($images as $image)
+                                    {{-- @foreach ($images as $image)
                                             <a href="#" class="swiper-slide">
                                                 <img class="img-full" src="{{ Vite::asset($image) }}" alt="Product Thumnail">
                                             </a>
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                             <div class="thumbs-arrow-holder">
                                 <div class="swiper-container modal-thumbs">
                                     <div class="swiper-wrapper">
-                                        @foreach ($images as $image)
+                                        {{-- @foreach ($images as $image)
                                         <a href="#" class="swiper-slide">
                                             <img class="img-full" src="{{ Vite::asset($image) }}" alt="Product Thumnail">
                                         </a>
-                                        @endforeach
+                                        @endforeach --}}
                                     </div>
                                 </div>
                                 <!-- Add Arrows -->
@@ -42,9 +42,9 @@
                     </div>
                     <div class="col-lg-6 pt-9 pt-lg-0">
                         <div class="single-product-content">
-                            <a class="product-name pb-1" href="{{route('singleProduct', $product->id)}}">{{ $product->title }}</a>
-                            <h2 class="title mb-3">Трактор YTO X804HK</h2>
-                            <p class="short-desc mb-9">{!! $product->description !!}</p>
+                            {{-- <a class="product-name pb-1" href="{{route('singleProduct', $product->id)}}">{{ $product->title }}</a> --}}
+                            <h2 class="title mb-3" id="product-name"></h2>
+                            <p class="short-desc mb-9" id="product-description"></p>
                         </div>
                     </div>
                 </div>

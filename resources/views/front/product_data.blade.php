@@ -7,19 +7,19 @@
                     <div class="product-item">
                         <div class="product-img img-zoom-effect">
                             <a href="single-product-variable.html">
-                                <img class="img-full" src="{{ Vite::asset($product->getImage()) }}" alt="{{ $product->title }}">
+                                <img class="img-full" src="{{ asset($product->getImage()) }}" alt="{{ $product->title }}">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-add-action">
                                 <ul>
                                     <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal">
-                                        <a href="{{route('singleProduct', $product->id)}}" data-tippy="Подробнее" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                        <a href="javascript:void(0)" data-url="{{route('oneProduct', $product->id)}}" id="show-product" data-tippy="Подробнее" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                             <i class="pe-7s-look"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" data-tippy="Добавить для сравнения" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                        <a href="{{route('singleProduct', $product->id)}}" data-tippy="Добавить для сравнения" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                             <i class="pe-7s-shuffle"></i>
                                         </a>
                                     </li>

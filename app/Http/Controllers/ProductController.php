@@ -30,28 +30,36 @@ class ProductController extends Controller
         return view('front.categories', compact('cats', 'products'));
     }
 
+    public function oneProduct($id){
+        $product = Product::where('id', $id)->firstOrFail();
+
+        /* $product_images = $product->images()->pluck('img')->all();
+        foreach ($product_images as $key => $image) {
+            if ($key > 0){
+                $images[$key] = 'resources/images/'. $image;
+            }
+        } */
+
+        return response()->json($product);
+    }
+
     public function showProduct($id){
         $product = Product::where('id', $id)->firstOrFail();
 
         $product_images = $product->images()->pluck('img')->all();
         foreach ($product_images as $key => $image) {
             if ($key > 0){
-                $images[$key] = 'resources/images/'. $image;
+                $images[$key] = '/assets/images/'. $image;
             }
         }
 
-        return view ('front.product', compact('product', 'images'));
+        return view('front.product', compact('product', 'images'));
     }
 
     public function getMoreProducts(Request $request){
         $query = $request->search_query;
         if($request->ajax()) {
-            if($query && !empty($query)) {
-                $products = Product::like($query)->paginate(12);
-                return view('front.product_data', compact('products'))->render();
-            }
-            $products = Product::paginate(12);
-
+            $products = Product::getProducts($query);
             return view('front.product_data', compact('products'))->render();
         }
     }

@@ -2,7 +2,7 @@
 @section('content')
  <!-- Begin Main Content Area -->
  <main class="main-content">
-    <div class="breadcrumb-area breadcrumb-height" data-bg-image="assets/images/breadcrumb/bg/1-1-1920x400.jpg">
+    <div class="breadcrumb-area breadcrumb-height">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-12">

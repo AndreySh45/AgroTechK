@@ -19,8 +19,10 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/shop', [ProductController::class, 'shop'])->name('shop');
 Route::view('/policy', 'front.privacy-policy')->name('policy');
 Route::get('/category/{cat}', [ProductController::class, 'showCategory'])->name('showCategory');
-Route::get('/product/{id}', [ProductController::class, 'showProduct'])->name('singleProduct');
+Route::get('/prod/{id}', [ProductController::class, 'oneProduct'])->name('oneProduct');
+Route::get('/products/{id}', [ProductController::class, 'showProduct'])->name('singleProduct');
 Route::get('pagination/getMoreProducts', [ProductController::class, 'getMoreProducts']);
+
 
 
 

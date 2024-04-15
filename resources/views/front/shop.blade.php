@@ -93,5 +93,21 @@
     }
 
 </script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('body').on('click', '#show-product', function () {
+          var productURL = $(this).data('url');
+          $.get(productURL, function (data) {
+              $('#productShowModal').modal('show');
+              $('#product-name').text(data.title);
+              $('#product-description').html(data.description);
+          })
+       });
+
+    });
+
+</script>
 @endpush
 

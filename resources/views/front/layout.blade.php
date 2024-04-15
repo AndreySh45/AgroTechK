@@ -15,19 +15,19 @@
     ============================================ -->
 
     <!-- Vendor CSS (Contain Bootstrap, Icon Fonts) -->
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/vendor/font-awesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/vendor/Pe-icon-7-stroke.css') }}" />
+    <link rel="stylesheet" href="{{asset('/assets/css/vendor/font-awesome.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('/assets/css/vendor/Pe-icon-7-stroke.css')}}" />
 
     <!-- Plugin CSS (Global Plugins Files) -->
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/magnific-popup.min.css') }}" />
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/plugins/ion.rangeSlider.min.css') }}" />
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/jquery-ui.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/magnific-popup.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('/assets/css/plugins/ion.rangeSlider.min.css')}}" />
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="{{ Vite::asset('resources/css/style.css') }}">
+    <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
 </head>
 
 <body>
@@ -345,7 +345,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="copyright">
-                                <span class="copyright-text">&copy; ООО "АгроТех-К", <script>document.write(new Date().getFullYear())</script> <a href="privacy-policy.html" rel="noopener" target="_blank">Политика конфиденциальности</a> </span>
+                                <span class="copyright-text">&copy; ООО "АгроТех-К", <script>document.write(new Date().getFullYear())</script> <a href="{{route('policy')}}" rel="noopener" target="_blank">Политика конфиденциальности</a> </span>
                             </div>
                         </div>
                     </div>
@@ -367,24 +367,24 @@
     <!-- Global Vendor, plugins JS -->
 
     <!-- Vendor JS -->
-    <script src="{{ Vite::asset('resources/js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/vendor/modernizr-3.11.2.min.js') }}"></script>
+    <script src="{{asset('/assets/js/vendor/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('/assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('/assets/js/vendor/jquery-migrate-3.3.2.min.js')}}"></script>
+    <script src="{{asset('/assets/js/vendor/modernizr-3.11.2.min.js')}}"></script>
 
     <!--Plugins JS-->
-    <script src="{{ Vite::asset('resources/js/plugins/wow.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/jquery-ui.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/swiper-bundle.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/jquery.nice-select.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/parallax.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/tippy.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/ion.rangeSlider.min.js') }}"></script>
-    <script src="{{ Vite::asset('resources/js/plugins/mailchimp-ajax.js') }}"></script>
+    <script src="{{asset('/assets/js/plugins/wow.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/jquery-ui.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/jquery.nice-select.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/parallax.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/tippy.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/ion.rangeSlider.min.js')}}"></script>
+    <script src="{{asset('/assets/js/plugins/mailchimp-ajax.js')}}"></script>
 
     <!--Main JS (Common Activation Codes)-->
-    <script src="{{ Vite::asset('resources/js/main.js') }}"></script>
+    <script src="{{asset('/assets/js/main.js')}}"></script>
     @stack('scripts')
 </body>
 

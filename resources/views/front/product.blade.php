@@ -34,8 +34,8 @@
                                 <div class="swiper-wrapper">
                                     @foreach ($images as $image)
                                         <div class="swiper-slide">
-                                            <a href="{{ Vite::asset($image) }}" class="single-img gallery-popup">
-                                                <img class="img-full" src="{{ Vite::asset($image) }}" alt="Product Image">
+                                            <a href="{{ asset($image) }}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset($image) }}" alt="Product Image">
                                             </a>
                                         </div>
                                     @endforeach
@@ -46,7 +46,7 @@
                                     <div class="swiper-wrapper">
                                         @foreach ($images as $image)
                                             <a href="#" class="swiper-slide">
-                                                <img class="img-full" src="{{ Vite::asset($image) }}" alt="Product Thumnail">
+                                                <img class="img-full" src="{{ asset($image) }}" alt="Product Thumnail">
                                             </a>
                                         @endforeach
                                     </div>
@@ -109,7 +109,7 @@
                                                 <input placeholder="Ваш номер телефона" type="text" id="phone" name="phone">
                                             </div>
                                         </div>
-                                        <p class="small text-left">Нажимая кнопку "Получить" Вы даете <a href="privacy-policy.html" target="_blank">согласие на обработку персональных данных</a>
+                                        <p class="small text-left">Нажимая кнопку "Получить" Вы даете <a href="{{route('policy')}}" target="_blank">согласие на обработку персональных данных</a>
                                         </p>
                                         <div class="button-wrap">
                                             <button type="submit" value="submit" class="btn btn btn-custom-size big-size btn-primary btn-secondary-hover rounded-0" name="submit">Получить коммерческое предложение</button>
