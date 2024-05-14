@@ -60,6 +60,7 @@ class ProductController extends Controller
         $query = $request->search_query;
         if($request->ajax()) {
             $products = Product::getProducts($query);
+
             return view('front.product_data', compact('products'))->render();
         }
     }

@@ -22,8 +22,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
 
     {
-        Paginator::defaultView('view-name');
-        Paginator::defaultSimpleView('view-name');
+        /* Paginator::defaultView('view-name');
+        Paginator::defaultSimpleView('view-name'); */
 
         view()->composer(['front.shop','front.categories'], function($view){
             $view->with('categories', Category::orderBy('id')->withCount('products')->get());
